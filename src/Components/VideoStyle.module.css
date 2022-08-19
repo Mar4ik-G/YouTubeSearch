@@ -1,0 +1,19 @@
+.mainBlock{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: 2px solid black;
+    margin: 25px;
+}
+
+.image{
+    width: 500px;
+    height: 300px;
+}
+
+.videoList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
