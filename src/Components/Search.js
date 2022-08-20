@@ -16,6 +16,7 @@ const Search = () => {
                 return response.json();
             })
             .then((data) => {
+                // console.log(data)
                 setData( data.items)
             });
     }
@@ -28,10 +29,17 @@ const Search = () => {
         }
     };
 
+    const handlerClick = (event) => {
+        event.preventDefault();
+        requestYT(key, maxResults, message);
+    }
+
     return (
         <div className="main">
-            <div className="search">
+            <div className={VS.search}>
                 <input
+                    className={VS.input}
+                    placeholder='Пошук'
                     onInput={showInput}
                     type={"text"}
                     id={"message"}
@@ -40,6 +48,9 @@ const Search = () => {
                     onChange={event => setMessage(event.target.value)}
                     onKeyDown={handleKeyDown}
                 />
+                <button className={VS.btnSearch} onClick={handlerClick}>
+                    <img className={VS.imgForBtn} src="http://cdn.onlinewebfonts.com/svg/img_143015.png" alt=""/>
+                </button>
             </div>
             <div className={VS.videoList}>
                 {data? data.map(e => <Videos key={e.id.videoId} data={e} />) : null}

@@ -1,14 +1,27 @@
 .mainBlock{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 500px;
+    height: 500px;
     border: 2px solid black;
     margin: 25px;
+}
+
+
+
+
+.video{
+    width: 500px;
+    height: 350px;
+
 }
 
 .image{
     width: 500px;
     height: 300px;
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .videoList{
@@ -16,4 +29,66 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.input{
+    width: 350px;
+    height: 30px;
+    margin: 20px 0px 0px 0px;
+    border: 1px solid black;
+    border-right: none;
+    font-size: 18px;
+    font-family: Bahnschrift,sans-serif;
+}
+
+.input:focus{
+    border: none;
+}
+
+
+.btnSearch{
+    width: 50px;
+    height: 34px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-left: none;
+}
+
+.btnClose{
+    margin: 0;
+    height: 30px;
+    width: 100px;
+}
+
+.btnClose img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgForBtn{
+    width: 20px;
+    height: 20px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Name{
+    color: Black;
+    margin: 10px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.Author{
+    color: gray;
+    margin: 0;
+    margin-left: 30px;
+    text-align: left;
 }

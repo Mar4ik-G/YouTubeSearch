@@ -6,28 +6,29 @@ const [clickVideo,setClickVideo] = useState()
 
 
     return (
-        <div className={VS.mainBlock}>
+        <div className={VS.mainBlock }>
             {clickVideo
                 ?
-                <div>
+                <div className={VS.video}>
                     <iframe
                         src={`http://www.youtube.com/embed/${props.data.id.videoId}?enablejsapi=1&origin=http://localhost:3000/`}
                         id="player"
                         type="text/html"
-                        width="500"
+                        width="496"
+
                         height="300">
                     </iframe>
-
-                    <button onClick={() => setClickVideo(false)}>HIDE</button>
+                    <button className={VS.btnClose} onClick={() => setClickVideo(false)}>
+                       HIDE
+                    </button>
                 </div>
 
             :<img className={VS.image}
                   src={props.data.snippet.thumbnails.high.url}
                   onClick={() => setClickVideo(true)}/>}
-
-            <p className="Name">{props.data.snippet.title}</p>
-            <p className="Author">{props.data.snippet.channelTitle}</p>
-            <p className="Description">{props.data.snippet.description}</p>
+            <p className={VS.Name}>{props.data.snippet.title}</p>
+            <p className={VS.Author}>{props.data.snippet.channelTitle}</p>
+            <p className={VS.Description}>{props.data.snippet.description}</p>
 
         </div>
     )
